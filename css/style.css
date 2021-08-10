@@ -129,7 +129,7 @@ ul{
 /* Start Nav bar section */
 
 .head{
-    background-color: rgba(128, 128, 128, .9);
+    background-color: #000;
     position: fixed;
     width: 100%;
     z-index: 9999999;
@@ -193,7 +193,7 @@ ul{
 /* Start Home Section */
 
 .home{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/screen-3.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('../images/slider-01.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -231,21 +231,45 @@ ul{
 }
 /* Animation */
 
-.home .animation{
-    width: 24ch;
-    display: inline;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: text 2s infinite 2s;
-    border-right: 1px solid white;
+.home .animation::after{
+    content: '';
+    animation: text 2s infinite alternate;
 }
 
 @keyframes text{
-    50%{
-        width: 14ch;
+    8%{
+        content: 'D';        
+    }
+    16%{
+        content: 'De';
+    }
+    24%{
+        content: 'Des';
+    }
+    32%{
+        content: 'Desi';
+    }
+    40%{
+        content: 'Desig';
+    }
+    48%{
+        content: 'Design';
+    }
+    56%{
+        content: 'Designe';
+    }
+    64%{
+        content: 'Designer';
+    }
+    76%{
+        content: 'Designer|';
+    }
+    
+    88%{
+        content: 'Designer';
     }
     100%{
-        width: 24ch;
+        content: 'Designer|';
     }
 }
 
